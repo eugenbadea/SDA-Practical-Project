@@ -26,12 +26,12 @@ PCM-6- IMPLEMENT VIEW ALL VETS
 As a user I should be able to view all the existing vets from the system.
         I should be able to view a list where each line will contain: id, firstname, lastname.
 
-PCM-6- IMPLEMENT VIEW VET BY ID
+PCM-7 - IMPLEMENT VIEW VET BY ID
 As a user I should be able to view all the details of an existing vet by id. If the given id is found in the system, the following details
 will be shown on the screen: id, firstname, lastname, address, speciality. If the given id is not found in the system an appropriate error message
 will be shown on the screen.
 
-PCM-7  - IMPLEMENT UPDATE VET
+PCM-8  - IMPLEMENT UPDATE VET
 As a user I should be able to update the details of an existing vet.
 If the vet is found by id in the system, I should be able to update the following data:
             - last name
@@ -44,7 +44,7 @@ The system will validate the following data:
     If the update process fails the system will show an appropriate error message.
 If the vet is not found by id in the system an appropriate error message will be shown.
 
-PCM-8- IMPLEMENT DELETE VET
+PCM-9  - IMPLEMENT DELETE VET
 As a user I should be able to delete and existing vet by id from the system.
 If the given id is found in the system the vet will be deleted and a message
 will be shown on the screen.
@@ -52,7 +52,7 @@ If the given id is not found in the system an appropriate error message will be 
 
 //////////////////////////////////////////////////////////////////////////////
 
-PCM-9   - IMPLEMENT PET CREATION
+PCM-10   - IMPLEMENT PET CREATION
  As a user I should be able to add a new pet with the following details: race, birthdate, isVaccinated, ownerName. If the creation process is successful
 the system will allocate a unique id to the new pet.
     The system will validate the following data:
@@ -62,16 +62,16 @@ the system will allocate a unique id to the new pet.
             - ownerName to be not blank and not empty
 If the creation process fails the system will show an appropriate error message.
 
-PCM-10  - IMPLEMENT VIEW ALL PETS
+PCM-11  - IMPLEMENT VIEW ALL PETS
 As a user I should be able to view all the existing pets from the system.
         I should be able to view a list where each line will contain: id, race, ownerName.
 
-PCM-11   - IMPLEMENT VIEW PET BY ID
+PCM-12   - IMPLEMENT VIEW PET BY ID
 As a user I should be able to view all the details of an existing pet by id. If the given id is found in the system, the following details
 will be shown on the screen: id, race, birthdate, isVaccinated, ownerName. If the given id is not found in the system an appropriate error message
 will be shown on the screen.
 
-PCM-12  - IMPLEMENT UPDATE PET
+PCM-13  - IMPLEMENT UPDATE PET
 As a user I should be able to update the details of an existing pet.
 If the pet is found by id in the system, I should be able to update the following data:
             - isVaccinated
@@ -82,7 +82,7 @@ The system will validate the following data:
     If the update process fails the system will show an appropriate error message.
 If the pet is not found by id in the system an appropriate error message will be shown.
 
-PCM-13- IMPLEMENT DELETE PET
+PCM-14  - IMPLEMENT DELETE PET
 As a user I should be able to delete and existing pet by id from the system.
 If the given id is found in the system the pet will be deleted and a message
 will be shown on the screen.
@@ -90,7 +90,7 @@ If the given id is not found in the system an appropriate error message will be 
 
 //////////////////////////////////////////////////////////////////////////////
 
-PCM-14   - IMPLEMENT CREATE CONSULT
+PCM-15   - IMPLEMENT CREATE CONSULT
 As a user I should be able to add a new consult with the following details: vet's id, pet's id, date, description. If the creation process is successful
    the system will allocate a unique id to the new consult.
        The system will validate the following data:
@@ -100,17 +100,17 @@ As a user I should be able to add a new consult with the following details: vet'
                - description to be not blank and not empty
    If the creation process fails the system will show an appropriate error message.
 
-PCM-15   - IMPLEMENT VIEW ALL CONSULTS
+PCM-16   - IMPLEMENT VIEW ALL CONSULTS
    As a user I should be able to view all the existing consults from the system.
            I should be able to view a list where each line will contain: consult id, vet's name, pet's ownerName, date.
 
-PCM-16   - IMPLEMENT VIEW CONSULT BY ID
+PCM-17   - IMPLEMENT VIEW CONSULT BY ID
       As a user I should be able to view all the details of an existing consult by id. If the given id is found in the system, the following details
       will be shown on the screen: consult id, vet's name, pet's ownerName, pet's race, consult date, consult description.
       If the given id is not found in the system an appropriate error message
       will be shown on the screen.
 
-PCM-17- IMPLEMENT UPDATE CONSULT
+PCM-18 - IMPLEMENT UPDATE CONSULT
    As a user I should be able to update the details of an existing consult.
    If the consult is found by id in the system, I should be able to update the following data:
                - description
