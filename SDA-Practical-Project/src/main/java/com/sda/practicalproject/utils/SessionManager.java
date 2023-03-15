@@ -1,5 +1,6 @@
 package com.sda.practicalproject.utils;
 
+import com.sda.practicalproject.model.Vet;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -19,7 +20,7 @@ public class SessionManager extends AbstractSessionManager{
     }
     @Override
     protected void setAnnotatedClasses(Configuration configuration) {
-
+      configuration.addAnnotatedClass(Vet.class);
 
 
     }
