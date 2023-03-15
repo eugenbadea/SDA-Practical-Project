@@ -1,6 +1,7 @@
 package com.sda.practicalproject.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="vet")
@@ -18,6 +19,8 @@ public class Vet {
     private String address;
     @Column(name="speciality")
     private String speciality;
+   // @OneToMany(mappedBy= "vet")
+   // private List<Consult> consults;
 
     public Vet() {
     }
