@@ -1,4 +1,4 @@
-package com.sda.practicalproject.repository;
+package com.sda.practicalproject.repository.base;
 
 import com.sda.practicalproject.repository.exception.EntityUpdateFailedException;
 
