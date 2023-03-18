@@ -1,31 +1,30 @@
 package com.sda.practicalproject.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name="vet")
+@Table(name = "vet")
 public class Vet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private long id;
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String firstName;
-    @Column(name="last_name")
+    @Column(name = "last_name")
     private String lastName;
-    @Column(name="address")
+    @Column(name = "address")
 
     private String address;
-    @Column(name="speciality")
+    @Column(name = "speciality")
     private String speciality;
-   // @OneToMany(mappedBy= "vet")
-   // private List<Consult> consults;
+    // @OneToMany(mappedBy= "vet")
+    // private List<Consult> consults;
 
     public Vet() {
     }
 
-    public Vet(String firstName, String lastName, String speciality) {
+    public Vet(String firstName, String lastName, String address, String speciality) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.speciality = speciality;
@@ -55,6 +54,14 @@ public class Vet {
         this.lastName = lastName;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String getSpeciality() {
         return speciality;
     }
@@ -69,6 +76,7 @@ public class Vet {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
                 ", speciality='" + speciality + '\'' +
                 '}';
     }
