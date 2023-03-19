@@ -54,6 +54,9 @@ public class Main {
                 case VIEW_VET_LIST:
                     vetController.displayAllVets();
                     break;
+                case VIEW_VET_BY_ID:
+                    vetController.findVetById();
+                    break;
                 case EXIT:
                     System.out.println("Good bye!");
                     break;
