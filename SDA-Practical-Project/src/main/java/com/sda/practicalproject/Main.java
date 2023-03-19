@@ -1,10 +1,12 @@
 package com.sda.practicalproject;
 
+import com.sda.practicalproject.controler.VetController;
 import com.sda.practicalproject.controler.menu.MenuItem;
 import com.sda.practicalproject.model.Vet;
 import com.sda.practicalproject.repository.VetRepository;
 import com.sda.practicalproject.repository.VetRepositoryImpl;
 import com.sda.practicalproject.repository.exception.EntityUpdateFailedException;
+import com.sda.practicalproject.service.VetServiceImpl;
 import com.sda.practicalproject.utils.SessionManager;
 import jdk.swing.interop.SwingInterOpUtils;
 
@@ -14,6 +16,10 @@ public class Main {
     public static void main(String[] args) throws EntityUpdateFailedException {
         Scanner scanner = new Scanner(System.in);
         SessionManager.getSessionFactory();
+        VetController vetController = new VetController(
+                new VetServiceImpl(new VetRepositoryImpl()),
+                scanner
+        );
 
         for (int i = 1; i <= 100; i++) {
             System.out.println("///////////////////////////////////////////////");
@@ -37,7 +43,7 @@ public class Main {
 
             switch (selectedOption) {
                 case ADD_VET:
-                    System.out.println("Add vet not implemented");
+                    vetController.createVet();
                     break;
                 case UPDATE_VET:
                     System.out.println("Update vet not implemented");
