@@ -1,5 +1,6 @@
 package com.sda.practicalproject.controler;
 
+import com.sda.practicalproject.model.Vet;
 import com.sda.practicalproject.repository.exception.EntityUpdateFailedException;
 import com.sda.practicalproject.service.VetService;
 
@@ -25,16 +26,23 @@ public class VetController {
             System.out.println("Please inert the vet's speciality:");
             String speciality = scanner.nextLine();
 
-           vetService.addVet(firstName,lastName,address,speciality);
+            vetService.addVet(firstName, lastName, address, speciality);
             System.out.println("Vet's details successfully saved");
         } catch (IllegalArgumentException e) {
 
             System.err.println(e.getMessage());
-        }catch(EntityUpdateFailedException e){
+        } catch (EntityUpdateFailedException e) {
             System.err.println(e.getMessage());
             System.err.println("Please retry!");
-        }catch(Exception e){
+        } catch (Exception e) {
             System.err.println("Internal server error");
         }
+    }
+
+    public void displayAllVets() {
+        for (Vet vet : vetService.getAllVets()) {
+            System.out.println(vet.getId() + " " + vet.getFirstName() + " " + vet.getLastName());
+        }
+
     }
 }
