@@ -7,6 +7,7 @@ import com.sda.practicalproject.repository.exception.EntityUpdateFailedException
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
+import java.util.List;
 
 public class PetServiceImpl implements PetService{
 private final PetRepository petRepository;
@@ -19,7 +20,7 @@ private final PetRepository petRepository;
     public void addPet(String race, Date dateOfBirth, boolean isVaccinated, String ownerName) throws EntityUpdateFailedException {
 
         if(race== null || race.isBlank() || race.isEmpty()){
-            throw new IllegalArgumentException("Please insetr a valid race");
+            throw new IllegalArgumentException("Please insert a valid race");
         }
         if(dateOfBirth== null){
             throw new IllegalArgumentException("Please insert a date of birth");
@@ -32,5 +33,10 @@ private final PetRepository petRepository;
         }
         Pet pet = new Pet(race,dateOfBirth,isVaccinated,ownerName);
         petRepository.save(pet);
+    }
+
+    @Override
+    public List<Pet> getAllPets() {
+        return petRepository.findAll();
     }
 }
